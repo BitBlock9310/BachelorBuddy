@@ -1,0 +1,23 @@
+{
+  "name": "bachelorbuddy",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "web-client",
+    "mobile-app",
+    "shared"
+  ],
+  "scripts": {
+    "web": "npm run dev -w web-client",
+    "mobile": "npm run start -w mobile-app",
+    "lint": "npm run lint --workspaces",
+    "build:web": "npm run build -w web-client",
+    "test": "npm run test --workspaces",
+    "clean": "rm -rf node_modules && npm run clean --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.5"
+  }
+} 
